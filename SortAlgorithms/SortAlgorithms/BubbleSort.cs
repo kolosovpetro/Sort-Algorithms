@@ -15,10 +15,10 @@ namespace SortAlgorithms.SortAlgorithms
             {
                 swapped = false;
 
-                for (var step = 1; step < copyArray.Length; step++)
+                for (var k = 1; k < copyArray.Length; k++)
                 {
-                    if (copyArray[step - 1] <= copyArray[step]) continue;
-                    ISortAlgorithm.Swap(copyArray, step - 1, step);
+                    if (copyArray[k - 1] <= copyArray[k]) continue;
+                    ISortAlgorithm.Swap(copyArray, k - 1, k);
                     swapped = true;
                 }
             }
