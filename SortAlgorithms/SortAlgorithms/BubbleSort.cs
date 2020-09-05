@@ -1,5 +1,4 @@
-﻿using SortAlgorithms.Auxiliaries.Auxiliaries;
-using SortAlgorithms.Interfaces;
+﻿using SortAlgorithms.Interfaces;
 
 namespace SortAlgorithms.SortAlgorithms
 {

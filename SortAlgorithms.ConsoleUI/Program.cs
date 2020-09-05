@@ -1,5 +1,6 @@
 ﻿using System;
 using SortAlgorithms.Interfaces;
+using SortAlgorithms.PerformanceLogger.Timer;
 using SortAlgorithms.SortAlgorithms;
 
 namespace SortAlgorithms.ConsoleUI
@@ -13,8 +14,11 @@ namespace SortAlgorithms.ConsoleUI
             sortAlgorithm.SortSequence(sequence);
 
             Console.WriteLine("Sorted sequence: ");
-            foreach (var value in sequence) 
+            foreach (var value in sequence)
                 Console.Write(value + " ");
+
+            var elapsedTime = RuntimeTimer.Measure(sortAlgorithm, sequence);
+            Console.WriteLine($"Measure exec time: {elapsedTime}");
         }
     }
 }

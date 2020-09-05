@@ -5,10 +5,7 @@ namespace SortAlgorithms.SortAlgorithms
 {
     public class MergeSort : ISortAlgorithm
     {
-        public void SortSequence(int[] sequence)
-        {
-            MergeSortExecute(sequence, 0, sequence.Length - 1);
-        }
+        public void SortSequence(int[] sequence) => MergeSortExecute(sequence, 0, sequence.Length - 1);
 
         private static void MergeSortExecute(int[] arr, int startIndex, int endIndex)
         {
