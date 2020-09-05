@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace SortAlgorithms.Interfaces
+﻿namespace SortAlgorithms.Interfaces
 {
     public interface ISortAlgorithm
     {
-        int[] SortSequence(IEnumerable<int> sequence);
+        int[] SortSequence(int[] sequence);
 
-        void Swap(int[] collection, int index1, int index2)
+        static void Swap(int[] collection, int index1, int index2)
         {
             var temp = collection[index1];
             collection[index1] = collection[index2];

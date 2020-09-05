@@ -4,4 +4,8 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SortAlgorithms.Auxiliaries\SortAlgorithms.Auxiliaries.csproj" />
+    </ItemGroup>
+
 </Project>
