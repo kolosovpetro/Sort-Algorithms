@@ -1,16 +1,13 @@
 ﻿using System;
-using SortAlgorithms.Auxiliaries.Auxiliaries;
 using SortAlgorithms.Interfaces;
 
 namespace SortAlgorithms.SortAlgorithms
 {
     public class MergeSort : ISortAlgorithm
     {
-        public int[] SortSequence(int[] sequence)
+        public void SortSequence(int[] sequence)
         {
-            var copyArray = ArrayDeepCopy.CopyArray(sequence);
-            MergeSortExecute(copyArray, 0, copyArray.Length - 1);
-            return copyArray;
+            MergeSortExecute(sequence, 0, sequence.Length - 1);
         }
 
         private static void MergeSortExecute(int[] arr, int startIndex, int endIndex)

@@ -1,16 +1,10 @@
-﻿using SortAlgorithms.Auxiliaries.Auxiliaries;
-using SortAlgorithms.Interfaces;
+﻿using SortAlgorithms.Interfaces;
 
 namespace SortAlgorithms.SortAlgorithms
 {
     public class QuickSort : ISortAlgorithm
     {
-        public int[] SortSequence(int[] sequence)
-        {
-            var copyArray = ArrayDeepCopy.CopyArray(sequence);
-            QuickSortExecute(copyArray, 0, copyArray.Length - 1);
-            return copyArray;
-        }
+        public void SortSequence(int[] sequence) => QuickSortExecute(sequence, 0, sequence.Length - 1);
 
         private static void QuickSortExecute(int[] array, int left, int right)
         {

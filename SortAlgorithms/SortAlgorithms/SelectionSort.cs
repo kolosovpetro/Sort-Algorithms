@@ -1,25 +1,20 @@
-﻿using SortAlgorithms.Auxiliaries.Auxiliaries;
-using SortAlgorithms.Interfaces;
+﻿using SortAlgorithms.Interfaces;
 
 namespace SortAlgorithms.SortAlgorithms
 {
     public class SelectionSort : ISortAlgorithm
     {
-        public int[] SortSequence(int[] sequence)
+        public void SortSequence(int[] sequence)
         {
-            var copyArray = ArrayDeepCopy.CopyArray(sequence);
-
-            for (var k = 0; k < copyArray.Length; k++)
+            for (var k = 0; k < sequence.Length; k++)
             {
                 var minIndex = k;
 
-                for (var j = k + 1; j < copyArray.Length; j++)
-                    minIndex = copyArray[minIndex] < copyArray[j] ? minIndex : j;
+                for (var j = k + 1; j < sequence.Length; j++)
+                    minIndex = sequence[minIndex] < sequence[j] ? minIndex : j;
                 
-                ISortAlgorithm.Swap(copyArray, k, minIndex);
+                ISortAlgorithm.Swap(sequence, k, minIndex);
             }
-
-            return copyArray;
         }
     }
 }

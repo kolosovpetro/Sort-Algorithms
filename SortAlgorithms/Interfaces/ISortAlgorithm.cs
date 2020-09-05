@@ -2,7 +2,7 @@
 {
     public interface ISortAlgorithm
     {
-        int[] SortSequence(int[] sequence);
+        void SortSequence(int[] sequence);
 
         static void Swap(int[] collection, int index1, int index2)
         {
