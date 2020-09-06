@@ -1,12 +1,17 @@
-﻿using SortAlgorithms.ArrayGenerators.Interfaces;
+﻿using System;
+using SortAlgorithms.ArrayGenerators.Interfaces;
 
 namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
 {
     public class SortedArray : IArrayGenerator
     {
+        private static readonly RandomArray RandomArray = new RandomArray();
+
         public int[] GenerateArray(int arraySize)
         {
-            throw new System.NotImplementedException();
+            var array = RandomArray.GenerateArray(arraySize);
+            Array.Sort(array);
+            return array;
         }
     }
 }
