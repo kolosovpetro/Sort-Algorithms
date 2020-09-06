@@ -6,7 +6,7 @@ namespace SortAlgorithms.SortAlgorithms
     {
         public void SortSequence(int[] sequence)
         {
-            var start = 0;
+            var start = 0;        // cocktail sort
             var end = sequence.Length;
 
             while (true)
