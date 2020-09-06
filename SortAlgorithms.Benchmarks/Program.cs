@@ -10,7 +10,7 @@ namespace SortAlgorithms.Benchmarks
     {
         private static void Main()
         {
-            const int sizeStep = 100;
+            const int sizeStep = 200;
             const int maxSize = 5000;
 
             for (var i = sizeStep; i <= maxSize; i += sizeStep)
@@ -37,7 +37,7 @@ namespace SortAlgorithms.Benchmarks
 
                 foreach (var algorithm in sortList)
                 {
-                    foreach (var array in arrayList) 
+                    foreach (var array in arrayList)
                         PerformanceLogger.Logger.PerformanceLogger.Log(algorithm, array);
                 }
             }

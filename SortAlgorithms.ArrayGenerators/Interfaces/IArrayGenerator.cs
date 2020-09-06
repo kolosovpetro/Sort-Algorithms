@@ -9,7 +9,7 @@ namespace SortAlgorithms.ArrayGenerators.Interfaces
 
         void PrintArray()
         {
-            foreach (var value in GetArray) 
+            foreach (var value in GetArray)
                 Console.Write(value + " ");
         }
     }

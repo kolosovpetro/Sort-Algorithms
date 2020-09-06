@@ -15,8 +15,7 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
             _randomArray = new RandomArray(arraySize / 2);
             GetArray = GenerateArray();
         }
-
-
+        
         private int[] GenerateArray()
         {
             var left = _randomArray.GetArray;
