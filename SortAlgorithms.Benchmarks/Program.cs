@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using SortAlgorithms.ArrayGenerators.ArrayGenerators;
 using SortAlgorithms.ArrayGenerators.Interfaces;
 using SortAlgorithms.Interfaces;
@@ -10,18 +10,37 @@ namespace SortAlgorithms.Benchmarks
     {
         private static void Main()
         {
-            var sequence = new[] {1, 9, 3, 7, 2, 6, 11, 14, 10, 6, 8, 19, 22};
-            ISortAlgorithm sortAlgorithm = new QuickSort();
-            sortAlgorithm.SortSequence(sequence);
+            const int sizeStep = 100;
+            const int maxSize = 5000;
 
-            Console.WriteLine("Sorted sequence: ");
-            foreach (var value in sequence)
-                Console.Write(value + " ");
+            for (var i = sizeStep; i <= maxSize; i += sizeStep)
+            {
+                var arrayList = new List<IArrayGenerator>
+                {
+                    new AShapeArray(i),
+                    new ConstantArray(i),
+                    new RandomArray(i),
+                    new ReversedArray(i),
+                    new SortedArray(i),
+                    new VShapeArray(i)
+                };
 
-            IArrayGenerator arrayGenerator = new AShapeArray(10);
-            Console.WriteLine("Generated array: ");
-            arrayGenerator.PrintArray();
-            PerformanceLogger.Logger.PerformanceLogger.Log(sortAlgorithm, arrayGenerator);
+                var sortList = new List<ISortAlgorithm>
+                {
+                    new BubbleSort(),
+                    new CocktailSort(),
+                    new InsertionSort(),
+                    new MergeSort(),
+                    new QuickSort(),
+                    new SelectionSort()
+                };
+
+                foreach (var algorithm in sortList)
+                {
+                    foreach (var array in arrayList) 
+                        PerformanceLogger.Logger.PerformanceLogger.Log(algorithm, array);
+                }
+            }
         }
     }
 }
