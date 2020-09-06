@@ -4,7 +4,7 @@ using SortAlgorithms.ArrayGenerators.Interfaces;
 using SortAlgorithms.Interfaces;
 using SortAlgorithms.SortAlgorithms;
 
-namespace SortAlgorithms.ConsoleUI
+namespace SortAlgorithms.Benchmarks
 {
     public static class Program
     {
