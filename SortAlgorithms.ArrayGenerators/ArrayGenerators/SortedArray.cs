@@ -6,6 +6,7 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
     public class SortedArray : IArrayGenerator
     {
         private readonly RandomArray _randomArray;
+        public int Length => GetArray.Length;
         public int[] GetArray { get; }
 
 
@@ -15,9 +16,9 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
             GetArray = GenerateArray();
         }
 
-        public int[] GenerateArray()
+        private int[] GenerateArray()
         {
-            var array = _randomArray.GenerateArray();
+            var array = _randomArray.GetArray;
             Array.Sort(array);
             return array;
         }

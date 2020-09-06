@@ -7,6 +7,7 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
     {
         private static readonly Random Random = new Random();
         private readonly int _arraySize;
+        public int Length => GetArray.Length;
         public int[] GetArray { get; }
 
         public ConstantArray(int arraySize)

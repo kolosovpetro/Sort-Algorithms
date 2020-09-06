@@ -7,7 +7,8 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
     public class AShapeArray : IArrayGenerator
     {
         private readonly RandomArray _randomArray;
-        public int[] GetArray { get; private set; }
+        public int Length => GetArray.Length;
+        public int[] GetArray { get; }
 
         public AShapeArray(int arraySize)
         {
@@ -16,11 +17,11 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
         }
 
 
-        public int[] GenerateArray()
+        private int[] GenerateArray()
         {
-            var left = _randomArray.GenerateArray();
+            var left = _randomArray.GetArray;
             Array.Sort(left);
-            var right = _randomArray.GenerateArray();
+            var right = _randomArray.GetArray;
             Array.Sort(right);
             Array.Reverse(right);
             return left.Concat(right).ToArray();
