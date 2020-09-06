@@ -2,7 +2,6 @@
 using SortAlgorithms.ArrayGenerators.ArrayGenerators;
 using SortAlgorithms.ArrayGenerators.Interfaces;
 using SortAlgorithms.Interfaces;
-using SortAlgorithms.PerformanceLogger.Timer;
 using SortAlgorithms.SortAlgorithms;
 
 namespace SortAlgorithms.ConsoleUI

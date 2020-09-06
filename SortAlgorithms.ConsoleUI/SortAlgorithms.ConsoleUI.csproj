@@ -8,7 +8,6 @@
     <ItemGroup>
       <ProjectReference Include="..\SortAlgorithms.ArrayGenerators\SortAlgorithms.ArrayGenerators.csproj" />
       <ProjectReference Include="..\SortAlgorithms.PerformanceLogger\SortAlgorithms.PerformanceLogger.csproj" />
-      <ProjectReference Include="..\SortAlgorithms.Tests\SortAlgorithms.Tests.csproj" />
       <ProjectReference Include="..\SortAlgorithms\SortAlgorithms.csproj" />
     </ItemGroup>
 
