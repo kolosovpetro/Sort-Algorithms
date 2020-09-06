@@ -22,8 +22,7 @@ namespace SortAlgorithms.ConsoleUI
             IArrayGenerator arrayGenerator = new AShapeArray(10);
             Console.WriteLine("Generated array: ");
             arrayGenerator.PrintArray();
-            var elapsedTime = RuntimeTimer.Measure(sortAlgorithm, arrayGenerator);
-            Console.WriteLine($"Measure exec time: {elapsedTime}");
+            PerformanceLogger.Logger.PerformanceLogger.Log(sortAlgorithm, arrayGenerator);
         }
     }
 }

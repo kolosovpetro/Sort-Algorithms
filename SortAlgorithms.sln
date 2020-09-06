@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms", "SortAlgor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms.Tests", "SortAlgorithms.Tests\SortAlgorithms.Tests.csproj", "{DFCAE009-88CD-40BD-B86E-A8DBA96FED9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms.Auxiliaries", "SortAlgorithms.Auxiliaries\SortAlgorithms.Auxiliaries.csproj", "{4A1A8AD8-08F8-4371-935A-2DEFD4DC2250}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms.ArrayGenerators", "SortAlgorithms.ArrayGenerators\SortAlgorithms.ArrayGenerators.csproj", "{30755641-56B7-4BD4-924F-1EDEFBBD40CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms.PerformanceLogger", "SortAlgorithms.PerformanceLogger\SortAlgorithms.PerformanceLogger.csproj", "{3228214B-FA69-4475-89DC-128268E56441}"
@@ -26,10 +24,6 @@ Global
 		{DFCAE009-88CD-40BD-B86E-A8DBA96FED9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCAE009-88CD-40BD-B86E-A8DBA96FED9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCAE009-88CD-40BD-B86E-A8DBA96FED9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A1A8AD8-08F8-4371-935A-2DEFD4DC2250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A1A8AD8-08F8-4371-935A-2DEFD4DC2250}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A1A8AD8-08F8-4371-935A-2DEFD4DC2250}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A1A8AD8-08F8-4371-935A-2DEFD4DC2250}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30755641-56B7-4BD4-924F-1EDEFBBD40CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30755641-56B7-4BD4-924F-1EDEFBBD40CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30755641-56B7-4BD4-924F-1EDEFBBD40CD}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -2,6 +2,6 @@
 {
     public static class Routes
     {
-        private const string CacheFolderPath = "../../../Benchmarks/";
+        public const string BenchmarksFolder = "../../../Benchmarks/";
     }
 }
