@@ -1,4 +1,6 @@
 ﻿using System;
+using SortAlgorithms.ArrayGenerators.ArrayGenerators;
+using SortAlgorithms.ArrayGenerators.Interfaces;
 using SortAlgorithms.Interfaces;
 using SortAlgorithms.PerformanceLogger.Timer;
 using SortAlgorithms.SortAlgorithms;
@@ -17,7 +19,10 @@ namespace SortAlgorithms.ConsoleUI
             foreach (var value in sequence)
                 Console.Write(value + " ");
 
-            var elapsedTime = RuntimeTimer.Measure(sortAlgorithm, sequence);
+            IArrayGenerator arrayGenerator = new AShapeArray(10);
+            Console.WriteLine("Generated array: ");
+            arrayGenerator.PrintArray();
+            var elapsedTime = RuntimeTimer.Measure(sortAlgorithm, arrayGenerator);
             Console.WriteLine($"Measure exec time: {elapsedTime}");
         }
     }

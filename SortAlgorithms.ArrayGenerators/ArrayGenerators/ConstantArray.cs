@@ -3,16 +3,25 @@ using SortAlgorithms.ArrayGenerators.Interfaces;
 
 namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
 {
-    public class ConstantArray: IArrayGenerator
+    public class ConstantArray : IArrayGenerator
     {
         private static readonly Random Random = new Random();
-        
-        public int[] GenerateArray(int arraySize)
-        {
-            var value = Random.Next(arraySize);
-            var array = new int[arraySize];
+        private readonly int _arraySize;
+        public int[] GetArray { get; }
 
-            for (var i = 0; i < arraySize; i++)
+        public ConstantArray(int arraySize)
+        {
+            _arraySize = arraySize;
+            GetArray = GenerateArray();
+        }
+
+
+        public int[] GenerateArray()
+        {
+            var value = Random.Next(_arraySize);
+            var array = new int[_arraySize];
+
+            for (var i = 0; i < _arraySize; i++)
                 array[i] = value;
 
             return array;

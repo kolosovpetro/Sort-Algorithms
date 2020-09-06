@@ -6,13 +6,21 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
     public class RandomArray : IArrayGenerator
     {
         private static readonly Random Random = new Random();
+        private readonly int _arraySize;
         
-        public int[] GenerateArray(int arraySize)
+        public int[] GetArray { get; }
+        public RandomArray(int arraySize)
         {
-            var array = new int[arraySize];
+            _arraySize = arraySize;
+            GetArray = GenerateArray();
+        }
 
-            for (var i = 0; i < arraySize; i++)
-                array[i] = Random.Next(arraySize);
+        public int[] GenerateArray()
+        {
+            var array = new int[_arraySize];
+
+            for (var i = 0; i < _arraySize; i++)
+                array[i] = Random.Next(_arraySize);
 
             return array;
         }

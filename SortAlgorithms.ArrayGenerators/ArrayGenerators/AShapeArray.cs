@@ -6,13 +6,21 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
 {
     public class AShapeArray : IArrayGenerator
     {
-        private static readonly RandomArray RandomArray = new RandomArray();
+        private readonly RandomArray _randomArray;
+        public int[] GetArray { get; private set; }
 
-        public int[] GenerateArray(int arraySize)
+        public AShapeArray(int arraySize)
         {
-            var left = RandomArray.GenerateArray(arraySize / 2);
+            _randomArray = new RandomArray(arraySize / 2);
+            GetArray = GenerateArray();
+        }
+
+
+        public int[] GenerateArray()
+        {
+            var left = _randomArray.GenerateArray();
             Array.Sort(left);
-            var right = RandomArray.GenerateArray(arraySize - arraySize / 2);
+            var right = _randomArray.GenerateArray();
             Array.Sort(right);
             Array.Reverse(right);
             return left.Concat(right).ToArray();

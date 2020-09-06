@@ -5,11 +5,18 @@ namespace SortAlgorithms.ArrayGenerators.ArrayGenerators
 {
     public class ReversedArray : IArrayGenerator
     {
-        private static readonly RandomArray RandomArray = new RandomArray();
+        private readonly RandomArray _randomArray;
+        public int[] GetArray { get; }
 
-        public int[] GenerateArray(int arraySize)
+        public ReversedArray(int arraySize)
         {
-            var array = RandomArray.GenerateArray(arraySize);
+            _randomArray = new RandomArray(arraySize);
+            GetArray = GenerateArray();
+        }
+
+        public int[] GenerateArray()
+        {
+            var array = _randomArray.GenerateArray();
             Array.Sort(array);
             Array.Reverse(array);
             return array;

@@ -1,7 +1,16 @@
-﻿namespace SortAlgorithms.ArrayGenerators.Interfaces
+﻿using System;
+
+namespace SortAlgorithms.ArrayGenerators.Interfaces
 {
     public interface IArrayGenerator
     {
-        int[] GenerateArray(int arraySize);
+        int[] GetArray { get; }
+        int[] GenerateArray();
+
+        void PrintArray()
+        {
+            foreach (var value in GetArray) 
+                Console.Write(value + " ");
+        }
     }
 }
