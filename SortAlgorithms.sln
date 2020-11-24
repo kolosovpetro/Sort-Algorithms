@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms", "SortAlgorithms\SortAlgorithms.csproj", "{A146C533-E706-4098-A4F8-010C7A1017F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms.Core", "SortAlgorithms.Core\SortAlgorithms.Core.csproj", "{A146C533-E706-4098-A4F8-010C7A1017F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms.Tests", "SortAlgorithms.Tests\SortAlgorithms.Tests.csproj", "{DFCAE009-88CD-40BD-B86E-A8DBA96FED9A}"
 EndProject

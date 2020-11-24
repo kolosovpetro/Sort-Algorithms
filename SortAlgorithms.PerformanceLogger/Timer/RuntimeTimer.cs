@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using SortAlgorithms.ArrayGenerators.Interfaces;
-using SortAlgorithms.Interfaces;
+using SortAlgorithms.Core.Interfaces;
 
 namespace SortAlgorithms.PerformanceLogger.Timer
 {

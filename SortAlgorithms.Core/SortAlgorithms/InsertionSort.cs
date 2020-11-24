@@ -1,7 +1,7 @@
-﻿using SortAlgorithms.Interfaces;
-using SortAlgorithms.Services;
+﻿using SortAlgorithms.Core.Interfaces;
+using SortAlgorithms.Core.Services;
 
-namespace SortAlgorithms.SortAlgorithms
+namespace SortAlgorithms.Core.SortAlgorithms
 {
     public class InsertionSort : ISortAlgorithm
     {

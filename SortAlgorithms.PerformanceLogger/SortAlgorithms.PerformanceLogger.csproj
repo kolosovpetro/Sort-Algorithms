@@ -6,7 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SortAlgorithms.ArrayGenerators\SortAlgorithms.ArrayGenerators.csproj" />
-      <ProjectReference Include="..\SortAlgorithms\SortAlgorithms.csproj" />
+      <ProjectReference Include="..\SortAlgorithms.Core\SortAlgorithms.Core.csproj" />
     </ItemGroup>
 
 </Project>

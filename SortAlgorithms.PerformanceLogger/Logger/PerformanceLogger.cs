@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using SortAlgorithms.ArrayGenerators.Interfaces;
-using SortAlgorithms.Interfaces;
+using SortAlgorithms.Core.Interfaces;
 using SortAlgorithms.PerformanceLogger.Timer;
 using static SortAlgorithms.PerformanceLogger.Logger.Routes;
 

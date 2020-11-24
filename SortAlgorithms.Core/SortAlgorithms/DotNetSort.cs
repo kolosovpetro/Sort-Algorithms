@@ -1,7 +1,7 @@
 ﻿using System;
-using SortAlgorithms.Interfaces;
+using SortAlgorithms.Core.Interfaces;
 
-namespace SortAlgorithms.SortAlgorithms
+namespace SortAlgorithms.Core.SortAlgorithms
 {
     public class DotNetSort : ISortAlgorithm
     {

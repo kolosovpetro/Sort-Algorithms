@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using SortAlgorithms.Interfaces;
-using SortAlgorithms.SortAlgorithms;
+using SortAlgorithms.Core.Interfaces;
+using SortAlgorithms.Core.SortAlgorithms;
 
 namespace SortAlgorithms.Tests.SortAlgorithmsTests
 {

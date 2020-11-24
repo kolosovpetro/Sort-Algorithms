@@ -1,4 +1,4 @@
-﻿namespace SortAlgorithms.Services
+﻿namespace SortAlgorithms.Core.Services
 {
     public static class SortServices
     {

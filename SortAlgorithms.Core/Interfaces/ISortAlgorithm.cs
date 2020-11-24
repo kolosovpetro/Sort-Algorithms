@@ -1,4 +1,4 @@
-﻿namespace SortAlgorithms.Interfaces
+﻿namespace SortAlgorithms.Core.Interfaces
 {
     public interface ISortAlgorithm
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using SortAlgorithms.ArrayGenerators.ArrayGenerators;
 using SortAlgorithms.ArrayGenerators.Interfaces;
-using SortAlgorithms.Interfaces;
-using SortAlgorithms.SortAlgorithms;
+using SortAlgorithms.Core.Interfaces;
+using SortAlgorithms.Core.SortAlgorithms;
 
 namespace SortAlgorithms.Benchmarks
 {
