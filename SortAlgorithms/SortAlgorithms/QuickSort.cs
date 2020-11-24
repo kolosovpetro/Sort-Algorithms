@@ -1,10 +1,14 @@
 ﻿using SortAlgorithms.Interfaces;
+using SortAlgorithms.Services;
 
 namespace SortAlgorithms.SortAlgorithms
 {
     public class QuickSort : ISortAlgorithm
     {
-        public void SortSequence(int[] sequence) => QuickSortExecute(sequence, 0, sequence.Length - 1);
+        public void SortSequence(int[] sequence)
+        {
+            QuickSortExecute(sequence, 0, sequence.Length - 1);
+        }
 
         private static void QuickSortExecute(int[] array, int left, int right)
         {
@@ -23,12 +27,12 @@ namespace SortAlgorithms.SortAlgorithms
             {
                 if (array[i] < pivot)
                 {
-                    ISortAlgorithm.Swap(array, i, end);
+                    SortServices.Swap(array, i, end);
                     end++;
                 }
             }
 
-            ISortAlgorithm.Swap(array, end, right);
+            SortServices.Swap(array, end, right);
             return end;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using SortAlgorithms.Interfaces;
+using SortAlgorithms.Services;
 
 namespace SortAlgorithms.SortAlgorithms
 {
@@ -13,7 +14,7 @@ namespace SortAlgorithms.SortAlgorithms
                 for (var j = k + 1; j < sequence.Length; j++)
                     minIndex = sequence[minIndex] < sequence[j] ? minIndex : j;
                 
-                ISortAlgorithm.Swap(sequence, k, minIndex);
+                SortServices.Swap(sequence, k, minIndex);
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using SortAlgorithms.Interfaces;
+using SortAlgorithms.Services;
 
 namespace SortAlgorithms.SortAlgorithms
 {
@@ -12,7 +13,7 @@ namespace SortAlgorithms.SortAlgorithms
 
                 while (j > 1 && sequence[j - 1] > sequence[j])
                 {
-                    ISortAlgorithm.Swap(sequence, j - 1, j);
+                    SortServices.Swap(sequence, j - 1, j);
                     j--;
                 }
             }

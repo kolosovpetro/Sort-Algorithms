@@ -32,7 +32,8 @@ namespace SortAlgorithms.Benchmarks
                     new InsertionSort(),
                     new MergeSort(),
                     new QuickSort(),
-                    new SelectionSort()
+                    new SelectionSort(),
+                    new DotNetSort()
                 };
 
                 foreach (var algorithm in sortList)

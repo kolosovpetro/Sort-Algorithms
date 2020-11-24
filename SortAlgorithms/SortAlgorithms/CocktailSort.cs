@@ -1,4 +1,5 @@
 ﻿using SortAlgorithms.Interfaces;
+using SortAlgorithms.Services;
 
 namespace SortAlgorithms.SortAlgorithms
 {
@@ -16,7 +17,7 @@ namespace SortAlgorithms.SortAlgorithms
                 for (var k = start; k < end - 1; k++)
                 {
                     if (sequence[k] < sequence[k + 1]) continue;
-                    ISortAlgorithm.Swap(sequence, k + 1, k);
+                    SortServices.Swap(sequence, k + 1, k);
                     swapped = true;
                 }
 
@@ -27,7 +28,7 @@ namespace SortAlgorithms.SortAlgorithms
                 for (var t = end - 1; t >= start; t--)
                 {
                     if (sequence[t] < sequence[t + 1]) continue;
-                    ISortAlgorithm.Swap(sequence, t + 1, t);
+                    SortServices.Swap(sequence, t + 1, t);
                 }
 
                 start++;
