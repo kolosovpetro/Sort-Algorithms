@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
-using SortAlgorithms.ArrayGenerators.Interfaces;
 using SortAlgorithms.Core.Interfaces;
 
 namespace SortAlgorithms.PerformanceLogger.Timer
 {
     public static class RuntimeTimer
     {
-        public static TimeSpan Measure(ISortAlgorithm sortAlgorithm, IArrayGenerator arrayGenerator)
+        public static TimeSpan Measure(ISortAlgorithm sortAlgorithm)
         {
-            var array = arrayGenerator.GetArray;
-            Action act = () => sortAlgorithm.SortSequence(array);
+            Action act = sortAlgorithm.SortSequence;
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             act.Invoke();

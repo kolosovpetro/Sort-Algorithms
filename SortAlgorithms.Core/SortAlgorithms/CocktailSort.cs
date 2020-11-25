@@ -1,14 +1,28 @@
-﻿using SortAlgorithms.Core.Interfaces;
+﻿using System.Linq;
+using SortAlgorithms.Core.Interfaces;
 using SortAlgorithms.Core.Services;
 
 namespace SortAlgorithms.Core.SortAlgorithms
 {
     public class CocktailSort : ISortAlgorithm
     {
-        public void SortSequence(int[] sequence)
+        public int[] InitialSequence { get; private set; }
+        public int[] SortedSequence { get; private set; }
+
+        public CocktailSort(int[] sequence)
         {
-            var start = 0;        // cocktail sort
-            var end = sequence.Length;
+            InitialSequence = sequence;
+            SortedSequence = sequence.Select(x => x).ToArray();
+        }
+
+        public CocktailSort()
+        {
+        }
+
+        public void SortSequence()
+        {
+            var start = 0; // cocktail sort
+            var end = SortedSequence.Length;
 
             while (true)
             {
@@ -16,8 +30,8 @@ namespace SortAlgorithms.Core.SortAlgorithms
 
                 for (var k = start; k < end - 1; k++)
                 {
-                    if (sequence[k] < sequence[k + 1]) continue;
-                    SortServices.Swap(sequence, k + 1, k);
+                    if (SortedSequence[k] < SortedSequence[k + 1]) continue;
+                    SortServices.Swap(SortedSequence, k + 1, k);
                     swapped = true;
                 }
 
@@ -27,12 +41,18 @@ namespace SortAlgorithms.Core.SortAlgorithms
 
                 for (var t = end - 1; t >= start; t--)
                 {
-                    if (sequence[t] < sequence[t + 1]) continue;
-                    SortServices.Swap(sequence, t + 1, t);
+                    if (SortedSequence[t] < SortedSequence[t + 1]) continue;
+                    SortServices.Swap(SortedSequence, t + 1, t);
                 }
 
                 start++;
             }
+        }
+
+        public void SetSequence(int[] sequence)
+        {
+            InitialSequence = sequence;
+            SortedSequence = sequence.Select(x => x).ToArray();
         }
     }
 }

@@ -2,6 +2,9 @@
 {
     public interface ISortAlgorithm
     {
-        void SortSequence(int[] sequence);
+        int[] InitialSequence { get; }
+        int[] SortedSequence { get; }
+        void SortSequence();
+        void SetSequence(int[] sequence);
     }
 }

@@ -12,7 +12,7 @@ namespace SortAlgorithms.Benchmarks
         {
             const int sizeStep = 200;
             const int maxSize = 5000;
-
+            
             for (var i = sizeStep; i <= maxSize; i += sizeStep)
             {
                 var arrayList = new List<IArrayGenerator>
@@ -24,7 +24,7 @@ namespace SortAlgorithms.Benchmarks
                     new SortedArray(i),
                     new VShapeArray(i)
                 };
-
+            
                 var sortList = new List<ISortAlgorithm>
                 {
                     new BubbleSort(),
@@ -35,13 +35,18 @@ namespace SortAlgorithms.Benchmarks
                     new SelectionSort(),
                     new DotNetSort()
                 };
-
+            
                 foreach (var algorithm in sortList)
                 {
                     foreach (var array in arrayList)
+                    {
+                        algorithm.SetSequence(array.GetArray);
                         PerformanceLogger.Logger.PerformanceLogger.Log(algorithm, array);
+                    }
                 }
             }
+            
+            
         }
     }
 }

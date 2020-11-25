@@ -11,7 +11,7 @@ namespace SortAlgorithms.PerformanceLogger.Logger
     {
         public static void Log(ISortAlgorithm sortAlgorithm, IArrayGenerator arrayGenerator)
         {
-            var elapsed = RuntimeTimer.Measure(sortAlgorithm, arrayGenerator);
+            var elapsed = RuntimeTimer.Measure(sortAlgorithm);
             var arrayType = arrayGenerator.GetType().Name;
             var size = arrayGenerator.Length;
             var algorithmName = sortAlgorithm.GetType().Name;

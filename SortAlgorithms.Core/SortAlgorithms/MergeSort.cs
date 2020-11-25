@@ -1,11 +1,34 @@
 ﻿using System;
+using System.Linq;
 using SortAlgorithms.Core.Interfaces;
 
 namespace SortAlgorithms.Core.SortAlgorithms
 {
     public class MergeSort : ISortAlgorithm
     {
-        public void SortSequence(int[] sequence) => MergeSortExecute(sequence, 0, sequence.Length - 1);
+        public int[] InitialSequence { get; private set; }
+        public int[] SortedSequence { get; private set; }
+
+        public MergeSort(int[] sequence)
+        {
+            InitialSequence = sequence;
+            SortedSequence = sequence.Select(x => x).ToArray();
+        }
+
+        public MergeSort()
+        {
+        }
+
+        public void SortSequence()
+        {
+            MergeSortExecute(SortedSequence, 0, InitialSequence.Length - 1);
+        }
+
+        public void SetSequence(int[] sequence)
+        {
+            InitialSequence = sequence;
+            SortedSequence = sequence.Select(x => x).ToArray();
+        }
 
         private static void MergeSortExecute(int[] arr, int startIndex, int endIndex)
         {

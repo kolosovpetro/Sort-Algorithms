@@ -1,13 +1,33 @@
-﻿using SortAlgorithms.Core.Interfaces;
+﻿using System.Linq;
+using SortAlgorithms.Core.Interfaces;
 using SortAlgorithms.Core.Services;
 
 namespace SortAlgorithms.Core.SortAlgorithms
 {
     public class QuickSort : ISortAlgorithm
     {
-        public void SortSequence(int[] sequence)
+        public int[] InitialSequence { get; private set; }
+        public int[] SortedSequence { get; private set; }
+
+        public QuickSort(int[] sequence)
         {
-            QuickSortExecute(sequence, 0, sequence.Length - 1);
+            InitialSequence = sequence;
+            SortedSequence = sequence.Select(x => x).ToArray();
+        }
+
+        public QuickSort()
+        {
+        }
+
+        public void SortSequence()
+        {
+            QuickSortExecute(SortedSequence, 0, InitialSequence.Length - 1);
+        }
+
+        public void SetSequence(int[] sequence)
+        {
+            InitialSequence = sequence;
+            SortedSequence = sequence.Select(x => x).ToArray();
         }
 
         private static void QuickSortExecute(int[] array, int left, int right)
